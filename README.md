@@ -20,3 +20,12 @@ You know, cause you totally will have to one day, right?
 That would be great. Ideally this has a driver similar to DynamoDB's AWS
 driver, so you just need to change packages to use the real thing. We 
 should totally do that. 
+
+## How easy is it to export my data from here to DynamoDB?
+
+The end goal is to have a command that allows for table creation in DynamoDB,
+and a chunk-exporter for data to go into DynamoDB. 
+
+## Do you really want to write a weird ORM?
+
+Uh....

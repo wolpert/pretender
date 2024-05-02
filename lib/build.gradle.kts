@@ -14,6 +14,8 @@ plugins {
 repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
+    maven("https://oss.sonatype.org/content/repositories/snapshots/")
+    maven("https://oss.sonatype.org/content/repositories/releases/")
 }
 
 dependencies {
@@ -23,6 +25,7 @@ dependencies {
 
     // This dependency is used internally, and not exposed to consumers on their own compile classpath.
     implementation(libs.bundles.jdbi3)
+    implementation(libs.slf4j.api)
 
     compileOnly(libs.immutables)
     annotationProcessor(libs.immutables)
@@ -34,6 +37,8 @@ testing {
         implementation(libs.bundles.jdbi3.testing)
         implementation(libs.bundles.testcontainers)
         implementation(libs.pgsql)
+        implementation(libs.bundles.testing)
+        implementation(libs.bundles.logback)
     }
     suites {
         // Configure the built-in test suite
